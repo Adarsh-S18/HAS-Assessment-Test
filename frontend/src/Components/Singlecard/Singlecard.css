@@ -1,0 +1,222 @@
+
+.card {
+    display: inline-block;
+    margin: 10px;
+    width: calc(25% - 20px);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+    position: relative; 
+  }
+  
+  .card-content {
+    padding: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    max-height: 120px;
+    overflow: hidden;
+  }
+  .card-content h3:first-letter  {
+    text-transform: uppercase;
+  }
+
+  .card-content p:first-letter {
+    text-transform: uppercase;
+  }
+  
+  .card-hover {
+    display: none;  
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+  .card-hover h4 {
+    margin-top: 0;
+  }
+  
+  .card-hover .editbutton {
+    margin: 10px;
+    padding: 8px 16px;
+    border: none;
+    width: 100px;
+    border-radius: 4px;
+    background-color: rgb(60, 193, 255);
+    color: black;
+    cursor: pointer;
+  }
+  
+  .card-hover .deletebutton {
+    margin: 10px;
+    padding: 8px 16px;
+    border: none;
+    width: 100px;
+    border-radius: 4px;
+    background-color: rgb(244, 58, 58);
+    color: white;
+    cursor: pointer;
+  }
+  
+  .card-hover .deletebutton:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 5, 5);
+  }
+  .card-hover .editbutton:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(5, 101, 255);
+  }
+  
+  .card:hover .card-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    cursor: pointer;
+  }
+  
+  .card:hover .card-hover {
+    display: flex;
+    z-index: 2;
+  }
+  
+  .card-hover:not(:hover) {
+    display: none;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 10px;
+  }
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+  }
+  
+  .modal-content {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    min-width: 400px;
+    max-height: 600px;
+    overflow: auto;
+
+  }
+  .modal-content img{
+    width: 200px;
+    object-fit: cover;
+  }
+
+  .modal-content h3,p{
+    color: black;
+  }
+  
+  .close {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+
+  .modal1 {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal-content1 {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    max-width: 500px;
+  }
+  .modal-content1 h3{
+    text-align: center;
+    color: black;
+  }
+  
+  .close1 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    color: black;
+  }
+  
+  label  {
+    margin-bottom: 10px;
+    color: black;
+
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  button[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  
+  .imageedit img{
+    object-fit: contain;
+    height: 100px;
+    width: 100px;
+  }

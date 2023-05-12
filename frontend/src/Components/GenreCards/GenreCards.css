@@ -1,0 +1,17 @@
+  
+  .genre-cards {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+  }
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    padding-top: 0px;
+  }
+  h2{
+    padding-left: 40px;
+  }
+  
+  
